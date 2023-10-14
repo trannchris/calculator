@@ -41,8 +41,19 @@
   margin-bottom: 20px;
   width: 310px;
   height: 25%;
-  font-size: 30px;
   gap: 10px;
+}
+
+.display-last {
+  min-height: 32px;
+  font-size: 20px;
+  margin-left: auto;
+}
+
+.display-current {
+  min-height: 64px;
+  font-size: 40px;
+  margin-left: auto;
 }
 
 .buttons-grid {
