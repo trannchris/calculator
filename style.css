@@ -1,3 +1,20 @@
+:root {
+  --background: #f6f6f6;
+  --font: #222;
+  --border: #333;
+  --screen: #eee;
+  --calculator: #aaa;
+  --btn: #eee;
+  --btn-hover: #ddd;
+  --btn-active: #ccc;
+  --btn-red: #faa;
+  --btn-red-hover: #e99;
+  --btn-red-active: #d88;
+  --btn-blue: #aaf;
+  --btn-blue-hover: #99e;
+  --btn-blue-active: #88d;
+}
+
 * {
   display: flex;
   justify-content: center;
@@ -7,51 +24,71 @@
 
 .calculator {
   margin-top: 100px;
-  border: 2px solid black;
+  border: 2px solid var(--border);
   border-radius: 10px;
   width: 400px;
   height: 600px;
-  background-color: lightgray;
+  padding: 20px;
+  background-color: var(--calculator);
 }
 
 .display {
-  background-color: white;
-  margin-top: 20px;
-  width: 90%;
-  height: 30%;
-  border: 2px solid black;
+  margin-top: 10px;
+  background-color: var(--screen);
+  padding: 10px 20px;
+  border: 2px solid var(--border);
   border-radius: 5px;
+  margin-bottom: 20px;
+  width: 310px;
+  height: 25%;
+  text-align: right;
   gap: 10px;
 }
 
-.buttons {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.buttons button {
-  background-color: white;
-  height: 50px;
-  width: 170px;
-  border-radius: 5px;
-}
-
-.numbers {
+.buttons-grid {
   height: 100%;
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  grid-template-rows: repeat(4, 2fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
-  margin-bottom: 20px;
 }
 
-.numbers button {
-  height: 60px;
-  width: 80px;
-  font-size: 24px;
+.span-2 {
+  grid-column: span 2;
+}
+
+.button {
+  padding: 20px;
+  border: 2px solid var(--border);
+  background-color: var(--btn);
   border-radius: 5px;
+  font-size: 24px;
+  color: var(--font);
+  width: 80px;
+}
+
+.button:hover {
+  background-color: var(--btn-hover);
+}
+
+.redButton,
+.blueButton {
+  width: 170px;
+}
+
+.redButton {
+  background-color: var(--btn-red);
+}
+
+.redButton:hover {
+  background-color: var(--btn-red-hover);
+}
+
+.blueButton {
+  background-color: var(--btn-blue);
+}
+
+.blueButton:hover {
+  background-color: var(--btn-blue-hover);
 }
